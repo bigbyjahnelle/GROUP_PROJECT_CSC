@@ -43,7 +43,7 @@ public class ServerMain {
     }
 
     private static void handleLogin(String message, PrintWriter out) {
-        String[] parts = message.split(":");
+        String[] parts = message.split(":"); //Checks validity of remote; safe guard
 
         if (parts.length < 3) {
             out.println("LOGIN_FAIL:MALFORMED_REQUEST");
@@ -53,8 +53,8 @@ public class ServerMain {
         String username = parts[1];
         String password = parts[2];
 
-        // Hardcoded for now — swap for DB/handler later
-        if ("admin".equals(username) && "1234".equals(password)) {
+        // Temp credentials — swap for firebase DB later (user admin, password admin)
+        if ("admin".equals(username) && "admin".equals(password)) {
             System.out.println("Login success for user: " + username);
             out.println("LOGIN_SUCCESS");
         } else {
