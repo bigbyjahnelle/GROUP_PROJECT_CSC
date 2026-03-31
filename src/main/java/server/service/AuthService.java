@@ -1,6 +1,7 @@
 package server.service;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthException;
 import com.google.firebase.auth.UserRecord;
 import org.springframework.stereotype.Service;
 import server.model.LoginRequest;
@@ -16,6 +17,17 @@ public class AuthService {
     // 3. Client sends that token to this server
     // 4. Server calls FirebaseAuth.getInstance().verifyIdToken(idToken) to validate it
     // 5. Server returns its own session response
+
+    public void createAccount(String email, String password, String firstName, String lastName) throws FirebaseAuthException
+    {
+        UserRecord.CreateRequest createRequest = new UserRecord.CreateRequest()
+                .setEmail(email)
+                .setPassword(password)
+                .setDisplayName(firstName + " " + lastName);
+
+        UserRecord userRecord = FirebaseAuth.getInstance().createUser(createRequest);
+        System.out.println("Successfully created new user: " + userRecord.getUid());
+    }
 
     // TODO COBIN: For create account:
     // Call FirebaseAuth.getInstance().createUser(new UserRecord.CreateRequest()
