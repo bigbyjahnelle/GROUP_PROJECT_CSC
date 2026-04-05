@@ -43,7 +43,7 @@ public class ServerMain {
     }
 
     private static void handleLogin(String message, PrintWriter out) {
-        String[] parts = message.split(":"); //Checks validity of remote; safe guard
+        String[] parts = message.split(":"); //Checks validity of remote; safeguard
 
         if (parts.length < 3) {
             out.println("LOGIN_FAIL:MALFORMED_REQUEST");
