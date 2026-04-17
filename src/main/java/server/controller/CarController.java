@@ -41,7 +41,7 @@ public class CarController {
 
     // DELETE /api/cars/{carId}
     @DeleteMapping("/{carId}")
-    public ResponseEntity<String> deleteCar(@PathVariable String carId, String Uid) {
+    public ResponseEntity<String> deleteCar(@PathVariable String carId, @PathVariable String Uid) {
         try {
             carService.deleteCar(carId, Uid);
             return ResponseEntity.ok("Car deleted.");
