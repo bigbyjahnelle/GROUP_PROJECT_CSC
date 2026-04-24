@@ -16,7 +16,7 @@
 <BorderPane xmlns="http://javafx.com/javafx/17.0.12"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="client.controller.MyRequestsController"
-            stylesheets="@../css/my_requests.css"
+            stylesheets="@../css/makeRequest.css"
             styleClass="root">
 
     <top>
@@ -25,18 +25,15 @@
                     onAction="#handleBack"
                     styleClass="back-btn"/>
 
-            <ImageView fitHeight="36" fitWidth="36" preserveRatio="true">
-                <Image url="@/images/ram.png"/>
-            </ImageView>
 
-            <Label text="FSC VALET - MY REQUESTS" styleClass="mr-title"/>
+            <Label text=" FSC VALET - MY REQUESTS" styleClass="mr-title"/>
 
             <Region HBox.hgrow="ALWAYS"/>
 
-            <Button text="Make a Request"
+            <Button text="Help"
                     onAction="#handleMakeRequest"
                     styleClass="submit-btn"
-                    prefWidth="160"/>
+                    prefWidth="90"/>
         </HBox>
     </top>
 
@@ -73,7 +70,7 @@
                                    wrapText="true"
                                    styleClass="empty-state-text"/>
 
-                            <Button text="Make First Request"
+                            <Button text="Make a Request"
                                     onAction="#handleMakeRequest"
                                     styleClass="submit-btn"
                                     prefWidth="220"/>

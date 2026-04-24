@@ -3,8 +3,7 @@
 }
 
 /* ROOT */
-.root,
-.requests-root {
+.root {
     -fx-background-color: linear-gradient(to bottom, #1a717a, #0f4249, #092b30, #08252b);
     -fx-font-family: "Montserrat";
 }
@@ -64,37 +63,9 @@
     -fx-border-color: transparent;
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
-    -fx-padding: 0;
 }
 
 .mr-scroll > .viewport {
-    -fx-background-color: transparent;
-}
-
-.mr-scroll .corner {
-    -fx-background-color: transparent;
-}
-
-.inner-scroll {
-    -fx-background: transparent;
-    -fx-background-color: transparent;
-    -fx-border-color: transparent;
-}
-
-.inner-scroll > .viewport {
-    -fx-background-color: transparent;
-}
-
-.inner-scroll .corner {
-    -fx-background-color: transparent;
-}
-
-/* ── PAGE WRAPPER ────────────────────────────── */
-.page-wrapper {
-    -fx-background-color: transparent;
-}
-
-.page-shell {
     -fx-background-color: transparent;
 }
 
@@ -106,8 +77,8 @@
     -fx-border-radius: 18;
     -fx-background-radius: 18;
     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.28), 20, 0.08, 0, 5);
-    -fx-pref-width: 640;
-    -fx-max-width: 640;
+    -fx-pref-width: 500;
+    -fx-max-width: 500;
     -fx-spacing: 18;
 }
 
